@@ -32,3 +32,14 @@ class LoginController extends \AndreyVasin\LaravelAuthBitrix\Controllers\LoginCo
 ```
 class RegisterController extends \AndreyVasin\LaravelAuthBitrix\Controllers\RegisterController
 ```
+
+В конфиге app\config\app.php заменить провайдер
+```    
+    'providers' => [
+
+        /*
+         * Laravel Framework Service Providers...
+         */
+        //Illuminate\Auth\AuthServiceProvider::class,
+        AndreyVasin\LaravelAuthBitrix\AuthServiceProvider::class,
+```
