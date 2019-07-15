@@ -85,7 +85,7 @@ class SessionGuard extends \Illuminate\Auth\SessionGuard
         @session_destroy();
 
         if (isset($this->events)) {
-            $this->events->dispatch(new \Illuminate\Auth\Events\Logout($user));
+            $this->events->dispatch(new \Illuminate\Auth\Events\Logout($this->name, $user));
         }
 
         // Once we have fired the logout event we will clear the users out of memory
